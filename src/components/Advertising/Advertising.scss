@@ -1,0 +1,50 @@
+$grey: #DADADA;
+$darkgrey: #797979;
+
+.advertising {
+  padding: 45px 56px 0 33px;
+
+  border-top: 1px solid $grey;
+  border-left: 1px solid $grey;
+  border-radius: 40px 0px 0px 0px;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__info {
+    display: flex;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: 0.374px;
+  }
+
+  &__text {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: $darkgrey;
+  }
+
+  &__btn {
+    background-color: inherit;
+    border: none;
+  }
+}

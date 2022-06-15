@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import NavBar from './components/NavBar';
+import Accounts from './components/Accounts';
+import Main from './components/Main';
+import SendMoney from './components/SendMoney';
+
+import { FintechProvider } from './FintechContext';
+import { Routes, Route } from 'react-router-dom';
+import ComingSoon from './components/ComingSoon';
+import Advertising from './components/Advertising';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FintechProvider>
+      <div className="App">
+        <NavBar />
+        <div className="App__accounts">
+          <Accounts />
+          <Advertising />
+        </div>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/SendMoney' element={< SendMoney />} />
+          <Route path='/TopUp' element={< ComingSoon />} />
+          <Route path='/Accouts' element={< ComingSoon />} />
+        </Routes>
+      </div>
+    </ FintechProvider>
   );
 }
 

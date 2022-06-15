@@ -1,0 +1,10 @@
+.App {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__accounts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
