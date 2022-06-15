@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fintech/static/css/main.7a6a289d.css",
-    "main.js": "/fintech/static/js/main.e4215a99.js",
+    "main.js": "/fintech/static/js/main.720786d1.js",
     "static/media/Monica.png": "/fintech/static/media/Monica.3c367eb237ad66d8f11f.png",
     "static/media/Leo.png": "/fintech/static/media/Leo.9da3b6b38ceefa75a7a0.png",
     "static/media/coin-icon.svg": "/fintech/static/media/coin-icon.8aeb77fb603cf9e382d1515781dd119d.svg",
@@ -21,10 +21,10 @@
     "index.html": "/fintech/index.html",
     "static/media/arrow-icon.svg": "/fintech/static/media/arrow-icon.8e5a56a92e2d105b267a03968aa59a19.svg",
     "main.7a6a289d.css.map": "/fintech/static/css/main.7a6a289d.css.map",
-    "main.e4215a99.js.map": "/fintech/static/js/main.e4215a99.js.map"
+    "main.720786d1.js.map": "/fintech/static/js/main.720786d1.js.map"
   },
   "entrypoints": [
     "static/css/main.7a6a289d.css",
-    "static/js/main.e4215a99.js"
+    "static/js/main.720786d1.js"
   ]
 }
