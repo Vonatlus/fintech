@@ -1,17 +1,30 @@
 {
   "files": {
     "main.css": "/fintech/static/css/main.7a6a289d.css",
-    "main.js": "/fintech/static/js/main.5959a22e.js",
+    "main.js": "/fintech/static/js/main.e4215a99.js",
+    "static/media/Monica.png": "/fintech/static/media/Monica.3c367eb237ad66d8f11f.png",
+    "static/media/Leo.png": "/fintech/static/media/Leo.9da3b6b38ceefa75a7a0.png",
+    "static/media/coin-icon.svg": "/fintech/static/media/coin-icon.8aeb77fb603cf9e382d1515781dd119d.svg",
+    "static/media/money-icon.svg": "/fintech/static/media/money-icon.e959e406526ca264e4a3eab761ebda74.svg",
+    "static/media/piggy-bank-icon.svg": "/fintech/static/media/piggy-bank-icon.b0bd65984dce5616ad0e1963e0cd646a.svg",
+    "static/media/home-icon.svg": "/fintech/static/media/home-icon.b5ecb8d1e1d40c804c0abd89f6fce672.svg",
     "static/media/home-icon-hover.svg": "/fintech/static/media/home-icon-hover.d4c19b5ca1656294e4c7.svg",
-    "static/media/pig-icon-hover.svg": "/fintech/static/media/pig-icon-hover.3827444e353d6b76f012.svg",
+    "static/media/pig-icon-hover.svg": "/fintech/static/media/pig-icon-hover.3827444e353d6b76f012fc3b00b48a27.svg",
+    "static/media/pig-icon.svg": "/fintech/static/media/pig-icon.560a5b506791bb4281be7f0f014e8e58.svg",
+    "static/media/card-icon.svg": "/fintech/static/media/card-icon.440cd064f731b049cd26aa5b9c15cebc.svg",
+    "static/media/check-icon.svg": "/fintech/static/media/check-icon.ae2f7c81741eda94b202b023b91dd226.svg",
+    "static/media/circle-icon.svg": "/fintech/static/media/circle-icon.3e3330d14cc6c49a535f1b98ca25bf2d.svg",
     "static/media/wallet-icon-hover.svg": "/fintech/static/media/wallet-icon-hover.d65e1403b0dc94929ce2.svg",
-    "static/media/send-icon-hover.svg": "/fintech/static/media/send-icon-hover.27c791b383476b3d654e.svg",
+    "static/media/wallet-icon.svg": "/fintech/static/media/wallet-icon.666cf4f37738591e5f343a1efbf681fd.svg",
+    "static/media/send-icon-hover.svg": "/fintech/static/media/send-icon-hover.27c791b383476b3d654eb05b1ca63e30.svg",
+    "static/media/send-icon.svg": "/fintech/static/media/send-icon.dd72ba645fa7fb08c95c61a70121a208.svg",
     "index.html": "/fintech/index.html",
+    "static/media/arrow-icon.svg": "/fintech/static/media/arrow-icon.8e5a56a92e2d105b267a03968aa59a19.svg",
     "main.7a6a289d.css.map": "/fintech/static/css/main.7a6a289d.css.map",
-    "main.5959a22e.js.map": "/fintech/static/js/main.5959a22e.js.map"
+    "main.e4215a99.js.map": "/fintech/static/js/main.e4215a99.js.map"
   },
   "entrypoints": [
     "static/css/main.7a6a289d.css",
-    "static/js/main.5959a22e.js"
+    "static/js/main.e4215a99.js"
   ]
 }
