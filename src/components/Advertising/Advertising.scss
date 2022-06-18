@@ -26,20 +26,15 @@ $darkgrey: #797979;
   &__title {
     margin: 0;
 
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 27px;
-    letter-spacing: 0.374px;
   }
 
   &__text {
     font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-
     color: $darkgrey;
   }
 

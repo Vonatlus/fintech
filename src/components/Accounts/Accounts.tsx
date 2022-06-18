@@ -1,35 +1,29 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { FC } from 'react';
 import { FintechContext } from '../../FintechContext';
 import './Accounts.scss';
 
-interface accountsData {
-  title: string,
-  currency: string,
-  balance: number
-}
-
-const accountsData: accountsData[] = [
+const accountsData = [
   {
-    title: 'Euro (EUR)',
-    currency: 'eur',
-    balance: 133.2
+    "title": "Euro (EUR)",
+    "currency": "eur",
+    "balance": 133.2
   },
   {
-    title: 'British Starling (GBP)',
-    currency: 'gbp',
-    balance: 110
+    "title": "British Sterling (GBP)",
+    "currency": "gbp",
+    "balance": 10
   },
   {
-    title: 'US Dollar (USD)',
-    currency: 'usd',
-    balance: 10234.2
+    "title": "US Dollar (USD)",
+    "currency": "usd",
+    "balance": 10234.2
   },
   {
-    title: 'South Korea Won (KRW)',
-    currency: 'krw',
-    balance: 0
-  },
+    "title": "South Korea Won (KRW)",
+    "currency": "krw",
+    "balance": 0
+  }
 ]
 
 function getCurrencySymbol(name: string) {
@@ -48,19 +42,31 @@ function getCurrencySymbol(name: string) {
 }
 
 export const Accounts: FC = () => {
-  const { setBalance } = useContext(FintechContext);
+  const { setBalance, accontsTitle, isAdvertising } = useContext(FintechContext);
+  const [isCurrencyActive, setIsCurrencyActive] = useState<string>('');
 
   function getBalance(cur: string, numb: number) {
     const balance = getCurrencySymbol(cur) + numb;
     setBalance(balance);
+    setIsCurrencyActive(cur);
   }
 
   return (
     <section className='accounts'>
       <ul className='accounts__list'>
-        <h2 className='accounts__list-title'>Your accounts</h2>
+        <h2 className='accounts__list-title'>
+          <i
+            className="icon-rose-card-icon"
+            style={{ marginRight: '10px', fontSize: '12px' }}
+            hidden={isAdvertising}
+          ></i>
+          {accontsTitle}
+        </h2>
         {accountsData.map(({ currency, title, balance }) => (
-          <li className='accounts__list-item' key={currency} onClick={() => getBalance(currency, balance)}>
+          <li
+            className={`accounts__list-item ${currency === isCurrencyActive && 'accounts__list-item-active'}`}
+            key={currency} onClick={() => getBalance(currency, balance)}
+          >
             <span className='accounts__list-item-title'>
               <i className={`symbol symbol_${currency}`}>{getCurrencySymbol(currency)}</i>
               {title}
@@ -69,34 +75,6 @@ export const Accounts: FC = () => {
           </li>
         ))}
       </ul>
-
-      {/* <article className="accounts__advertising advertising">
-        <div className="advertising__block">
-          <div className="advertising__info">
-            <img className="advertising__icon" src="/images/icons/card-icon.svg" alt="Card" />
-            <div>
-              <h4 className="advertising__title">Request a Card</h4>
-              <span className="advertising__text">Get a debit card for free</span>
-            </div>
-          </div>
-          <button className="advertising__btn">
-            <img src="/images/icons/arrow-icon.svg" alt="Arrow" />
-          </button>
-        </div>
-
-        <div className="advertising__block">
-          <div className="advertising__info">
-            <img className="advertising__icon" src="/images/icons/money-icon.svg" alt="Money" />
-            <div>
-              <h4 className="advertising__title">Earn £ 25 for free</h4>
-              <span className="advertising__text">Apply for pension</span>
-            </div>
-          </div>
-          <button className="advertising__btn">
-            <img src="/images/icons/arrow-icon.svg" alt="Arrow" />
-          </button>
-        </div>
-      </article> */}
-    </section>
+    </section >
   )
 }

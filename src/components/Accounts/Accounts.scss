@@ -1,6 +1,7 @@
 $white: #FFFFFF;
 $grey: #DADADA;
 $darkgrey: #797979;
+$rose: #FD3A6C;
 
 .accounts {
   display: flex;
@@ -9,13 +10,7 @@ $darkgrey: #797979;
 
   margin-top: 50px;
 
-
   &__list {
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    letter-spacing: 0.37px;
-
     padding: 0;
     margin: 0;
 
@@ -23,12 +18,9 @@ $darkgrey: #797979;
       margin: 0;
       margin-left: 30px;
 
-      font-style: normal;
       font-weight: 700;
       font-size: 20px;
       line-height: 30px;
-
-      letter-spacing: 0.374px;
     }
 
     &-item {
@@ -49,6 +41,9 @@ $darkgrey: #797979;
       border-radius: 20px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 
+      transition: 0.5s;
+
+      &-active,
       &:hover {
         background: linear-gradient(180deg, #FD3A6C 0%, #F5855C 100%);
         box-shadow: 0px 0px 7px #EE4874;
@@ -61,15 +56,15 @@ $darkgrey: #797979;
           content: '.';
           position: absolute;
           left: -20px;
-          bottom: 30px;
+          bottom: 35px;
 
-          font-size: 40px;
-          color: #FD3A6C;
+          font-size: 50px;
+          color: $rose;
         }
 
         .symbol {
-          background-color: #fff;
-          color: #FD3A6C;
+          background-color: $white;
+          color: $rose;
         }
       }
 
@@ -78,14 +73,12 @@ $darkgrey: #797979;
         justify-content: center;
         align-items: center;
 
-        font-style: normal;
         font-weight: 500;
         font-size: 15px;
         line-height: 22px;
       }
 
       &-balance {
-        font-style: normal;
         font-weight: 700;
         font-size: 20px;
         line-height: 30px;
@@ -93,54 +86,6 @@ $darkgrey: #797979;
     }
   }
 }
-
-// .advertising {
-//   padding: 45px 56px 0 33px;
-
-//   border-top: 1px solid $grey;
-//   border-left: 1px solid $grey;
-//   border-radius: 40px 0px 0px 0px;
-
-//   &__block {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     margin-bottom: 40px;
-//   }
-
-//   &__info {
-//     display: flex;
-//   }
-
-//   &__icon {
-//     margin-right: 20px;
-//   }
-
-//   &__title {
-//     margin: 0;
-
-//     font-style: normal;
-//     font-weight: 700;
-//     font-size: 18px;
-//     line-height: 27px;
-//     letter-spacing: 0.374px;
-//   }
-
-//   &__text {
-//     font-family: 'Roboto', sans-serif;
-//     font-style: normal;
-//     font-weight: 400;
-//     font-size: 14px;
-//     line-height: 16px;
-
-//     color: $darkgrey;
-//   }
-
-//   &__btn {
-//     background-color: inherit;
-//     border: none;
-//   }
-// }
 
 .symbol {
   display: flex;
@@ -151,26 +96,24 @@ $darkgrey: #797979;
 
   font-style: normal;
 
-  color: white;
+  color: $white;
   width: 28px;
   height: 30px;
-  background-color: red;
   border-radius: 50%;
 
-  &_eur{
+  &_eur {
     background-color: #42507F;
   }
 
-  &_eur{
-    background-color: #42507F;
+  &_gbp {
+    background-color: red;
   }
 
-  &_usd{
+  &_usd {
     background-color: #F5855C;
   }
 
-  &_krw{
+  &_krw {
     background-color: #FFAC30;
   }
 }
-

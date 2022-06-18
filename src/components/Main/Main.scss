@@ -4,9 +4,10 @@ $rose: #FD3A6C;
 $lightgrey: #F8F8F8;
 
 .main {
+  box-sizing: border-box;
   width: 690px;
-
-  padding: 80px 40px;
+  padding: 0 40px;
+  padding-top: 33px;
   margin-top: 50px;
 
   background-color: $white;
@@ -14,12 +15,6 @@ $lightgrey: #F8F8F8;
 
   &__text {
     margin: 18px 0;
-
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
     color: $grey;
   }
 
@@ -30,7 +25,6 @@ $lightgrey: #F8F8F8;
     margin-bottom: 40px;
 
     &-sum {
-      font-style: normal;
       font-weight: 700;
       font-size: 48px;
       line-height: 72px;
@@ -47,7 +41,6 @@ $lightgrey: #F8F8F8;
       font-style: normal;
       font-weight: 400;
       font-size: 14px;
-      line-height: 120%;
       color: $rose;
 
       background-color: $white;
@@ -91,7 +84,6 @@ $lightgrey: #F8F8F8;
         &>img {
           width: 27px;
           height: 30px;
-
           margin-bottom: 20px;
         }
 
@@ -136,14 +128,8 @@ $lightgrey: #F8F8F8;
     }
 
     &-title {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.374px;
-      color: #B5B5B5;
-
       display: flex;
+      color: #B5B5B5;
 
       &_last {
         margin-left: 30px;
@@ -151,20 +137,13 @@ $lightgrey: #F8F8F8;
     }
 
     &-desc {
-      font-style: normal;
       font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 0.374px;
       margin: 0;
-
-      color: #262626;
 
       &_img {
         display: flex;
         justify-content: center;
         align-items: center;
-
       }
     }
 

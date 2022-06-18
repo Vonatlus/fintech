@@ -2,35 +2,56 @@ import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FintechContext } from '../../FintechContext';
 import './Main.scss';
+import ICONS from '../../images/icons';
+import PICTURES from '../../images/pictures';
 
 export const Main = () => {
-  const { balance } = useContext(FintechContext);
-
+  const {
+    balance,
+    setIsAdvertising,
+    setProfileInfo,
+    setAccontsTitle
+  } = useContext(FintechContext);
   const navigate = useNavigate();
+
+  function navigatePage(e: any) {
+    navigate(e.target.value);
+    setIsAdvertising(false);
+    setProfileInfo('Setting');
+    setAccontsTitle('Send Money From:');
+  }
 
   return (
     <main className='main'>
       <p className='main__text'>Balance</p>
       <article className='main__balance'>
         <span className='main__balance-sum'>{balance}</span>
-        <button className='main__balance-btn' onClick={() => navigate('/TopUp')}>
-          <img src="/images/icons/pig-icon-hover.svg" alt="Pig" />
+        <button
+          className='main__balance-btn'
+          value='/TopUp'
+          onClick={navigatePage}
+        >
+          <img src={ICONS.pigHover} alt="Pig" />
           <p>Top up</p>
         </button>
       </article>
 
       <p className='main__text'>Quick Transaction</p>
       <article className='main__transaction'>
-        <button className='main__transaction-btn main__transaction-btn_send' onClick={() => navigate('/SendMoney')}>
-          <img src="/images/icons/send-icon-hover.svg" alt="Send" />
+        <button
+          className='main__transaction-btn main__transaction-btn_send'
+          value='/SendMoney'
+          onClick={navigatePage}
+        >
+          <img src={ICONS.sendHover} alt="Send" />
           <p>Send Money</p>
         </button>
         <button className='main__transaction-btn'>
-          <img src="/images/pictures/Leo.png" alt="Leo" />
-          <p>Lew W.</p>
+          <img src={PICTURES.Leo} alt="Leo" />
+          <p>Leo W.</p>
         </button>
         <button className='main__transaction-btn'>
-          <img src="/images/pictures/Monica.png" alt="Monica" />
+          <img src={PICTURES.Monica} alt="Monica" />
           <p>Monica L.</p>
         </button>
       </article>
@@ -38,7 +59,7 @@ export const Main = () => {
       <article className='main__info'>
         <div className='main__info-ceil'>
           <span className='main__info-title'>
-            <img className='main__info-icon' src="/images/icons/check-icon.svg" alt="Check" />
+            <img className='main__info-icon' src={ICONS.check} alt="Check" />
             Account Type:
           </span>
           <p className='main__info-desc'>Personal</p>
@@ -46,7 +67,7 @@ export const Main = () => {
         <div className="main__info-line"></div>
         <div className='main__info-ceil'>
           <span className='main__info-title'>
-            <img className='main__info-icon' src="/images/icons/coin-icon.svg" alt="Coins" />
+            <img className='main__info-icon' src={ICONS.coin} alt="Coins" />
             Currency
           </span>
           <p className='main__info-desc'>Euro EUR</p>
@@ -56,7 +77,7 @@ export const Main = () => {
       <article className='main__info'>
         <div className='main__info-ceil'>
           <span className='main__info-title'>
-            <img className='main__info-icon' src="/images/icons/piggy-bank-icon.svg" alt="Piggy-bank" />
+            <img className='main__info-icon' src={ICONS.piggy} alt="Piggy-bank" />
             Passive Saving
           </span>
           <p className='main__info-desc'>Enabled 20%</p>
@@ -67,10 +88,10 @@ export const Main = () => {
             Share Account
           </span>
           <div className='main__info-desc main__info-desc_img'>
-            <img className='main__info-profile' src="/images/pictures/man-with-glasses.png" alt="Man with glasses" />
-            <img className='main__info-profile' src="/images/pictures/woman-red-hair.png" alt="Woman red hair" />
-            <img className='main__info-profile' src="/images/pictures/woman-broun-hair.png" alt="Woman broun hair" />
-            <img className='main__info-profile main__info-profile_circle' src="/images/icons/circle-icon.svg" alt="Circle" />
+            <img className='main__info-profile' src={PICTURES.manWithGlasses} alt="Man with glasses" />
+            <img className='main__info-profile' src={PICTURES.womanRedHair} alt="Woman red hair" />
+            <img className='main__info-profile' src={PICTURES.womanBrounHair} alt="Woman broun hair" />
+            <img className='main__info-profile main__info-profile_circle' src={ICONS.circle} alt="Circle" />
           </div>
         </div>
       </article>

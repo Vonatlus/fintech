@@ -1,4 +1,6 @@
 .ComingSoon {
+  box-sizing: border-box;
+
   width: 690px;
   padding: 80px 40px;
 
@@ -6,9 +8,7 @@
   justify-content: center;
   align-items: center;
 
-  font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
-  letter-spacing: 0.374px;
 }
